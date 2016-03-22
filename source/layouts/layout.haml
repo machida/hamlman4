@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no", :name => "viewport"}
+    %title= current_page.data.title || "Middleman"
+    = stylesheet_link_tag :application
+    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js', :application
+  %body{class: page_classes}
+    = partial 'layouts/header'
+    = yield
+    = partial 'layouts/footer'
